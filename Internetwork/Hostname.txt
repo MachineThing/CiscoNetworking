@@ -1,0 +1,7 @@
+How to assign a hostname to an IOS device:
+
+Router>enable
+Router#conf term
+Router(config)#hostname routerName
+routerName(config)#exit
+routerName#

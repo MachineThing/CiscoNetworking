@@ -1,0 +1,13 @@
+How to configure a MOTD on an IOS device:
+
+Router>enable
+Router#conf term
+Router(config)#banner motd #Your MOTD goes here#
+
+Now once you log on to the IOS device again, you will see something like this:
+
+Press RETURN to get started!
+
+Your MOTD goes here
+
+Router>
