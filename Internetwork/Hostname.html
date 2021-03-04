@@ -2,17 +2,25 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../index.css"/>
         <title>IOS - Hostname</title>
     </head>
     <body>
-        <p>
-        How to assign a hostname to an IOS device:<br />
-        <br />
-        Router>enable<br />
-        Router#conf term<br />
-        Router(config)#hostname routerName<br />
-        routerName(config)#exit<br />
-        routerName#<br />
-        </p>
+        <h1>Hostname</h1>
+        <div class="content">
+            <p>
+            How to assign a hostname to an IOS device:
+            </p>
+            <div class="command">
+                <p>
+                Router>enable<br />
+                Router#conf term<br />
+                Router(config)#hostname routerName<br />
+                routerName(config)#exit<br />
+                routerName#<br />
+                </p>
+            </div>
+            <p>The hostname of the router will now be <span class="command">routerName</span></p>
+        </div>
     </body>
 </html>

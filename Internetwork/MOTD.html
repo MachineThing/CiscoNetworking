@@ -2,23 +2,32 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../index.css"/>
         <title>IOS - MOTD</title>
     </head>
     <body>
-        <p>
-        How to configure a MOTD on an IOS device:<br />
-        <br />
-        Router>enable<br />
-        Router#conf term<br />
-        Router(config)#banner motd #Your MOTD goes here#<br />
-        <br />
-        Now once you log on to the IOS device again, you will see something like this:<br />
-        <br />
-        Press RETURN to get started!<br />
-        <br />
-        Your MOTD goes here<br />
-        <br />
-        Router><br />
-        </p>
+        <h1>Motto Of The Day</h1>
+        <div class="content">
+            <p>
+                How to configure a MOTD on an IOS device:
+                <div class="command">
+                    <p>
+                    Router>enable<br />
+                    Router#conf term<br />
+                    Router(config)#banner motd #Your MOTD goes here#<br />
+                    </p>
+                </div>
+                Now once you log on to the IOS device again, you will see something like this:
+                <div class="command">
+                    <p>
+                    Press RETURN to get started!<br />
+                    <br />
+                    Your MOTD goes here<br />
+                    <br />
+                    Router>
+                    </p>
+                </div>
+            </p>
+        </div>
     </body>
 </html>
