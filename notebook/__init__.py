@@ -9,6 +9,7 @@ def init():
             for file in files:
                 os.remove(os.path.join(root, file))
     copyfile('index.css', 'build/index.css')
+    copyfile('index.html', 'build/index.html')
 
 # popoptions are Pass Options
 def generate(poptions, content):
