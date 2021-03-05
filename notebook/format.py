@@ -7,7 +7,7 @@ class strbuffer:
     def __init__(self):
         self.buffer = ''
     def append(self, data, suffix='\n'):
-        self.buffer = self.buffer + data + end
+        self.buffer = self.buffer + data + suffix
 
 paragraph = element('<p>', '</p>')
 command = element('<p class=\"command\">', '</p>')
@@ -30,6 +30,12 @@ class formatter:
         for text in self.buffer:
             if key != text[0]:
                 if key != None:
-                    cbuffer.append(text[1])
+                    cbuffer.append(key.endtag + '\n'+text[0].tag)
+                    cbuffer.append(text[1] + '<br />')
+                else:
+                    cbuffer.append(text[0].tag + text[1])
+                key = text[0]
+            else:
+                cbuffer.append(text[1] + '<br />')
         cbuffer.append(key.endtag)
         return cbuffer.buffer
