@@ -5,6 +5,7 @@ formatter.append('c', 'Router>enable')
 formatter.append('c', 'Router#conf term')
 formatter.append('c', 'Router(config)#hostname <b>routerName</b>')
 formatter.append('c', 'routerName(config)#exit')
+formatter.append('p', 'The hostname of the router will now be <b>routerName</b>')
 
 notebook.generate(
     {
