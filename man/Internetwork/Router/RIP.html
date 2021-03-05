@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../../index.css"/>
+        <title>Router - RIP</title>
+    </head>
+    <body>
+        <h1>Routing Information Protocol (v2)</h1>
+        <div class="content">
+            <p>How to make a RIP route on a router<br />
+            In this example, lets just say you want to make it so people (from an ISP cloud) can access your server (that is located at <b>18.0.0.2</b>) on your router, with RIP routing you can do just that!</p>
+            <div class="command">
+                <p>
+                Router>enable<br />
+                Router#conf term<br />
+                Router(config)#router rip<br />
+                </p>
+            </div>
+            <p>It is highly recommended to use RIPv2, which is newer. We will do that</p>
+            <div class="command">
+                <p>
+                Router(config-router)#version 2<br />
+                Router(config-router)#network <b>18.0.0.0</b><br />
+                </p>
+            </div>
+            <p>Now outside computers should now be able to connect to the server</p>
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png" /></a>
+        </div>
+    </body>
+</html>
