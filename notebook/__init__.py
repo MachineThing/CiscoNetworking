@@ -23,13 +23,13 @@ def generate(poptions, content):
         raise NameError('Your file must have a name!')
     try:
         options['exname'] = poptions['exname']
-    except TypeError:
+    except KeyError:
         options['exname'] = options['name']
 
     html = open('notebook/template.html', 'r')
-    render = html.read().replace('{{ cat }}', poptions['cat'])
-    render = render.replace('{{ name }}', poptions['name'])
-    render = render.replace('{{ exname }}', poptions['exname'])
+    render = html.read().replace('{{ cat }}', options['cat'])
+    render = render.replace('{{ name }}', options['name'])
+    render = render.replace('{{ exname }}', options['exname'])
     render = render.replace('{{ data }}', content)
     file = open('build/'+options['name']+'.html', 'w')
     file.write(render)
