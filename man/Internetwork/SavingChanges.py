@@ -9,8 +9,7 @@ formatter.append('p', 'Press enter then your changes are now saved into NVRAM!')
 notebook.generate(
     {
         'cat':'IOS',
-        'name':'MOTD',
-        'exname':'Motto Of The Day'
+        'name':'Saving changes to NVRAM'
     },
     formatter.compile()
     )

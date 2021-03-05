@@ -31,6 +31,7 @@ def generate(poptions, content):
     render = render.replace('{{ name }}', options['name'])
     render = render.replace('{{ exname }}', options['exname'])
     render = render.replace('{{ data }}', content)
-    file = open('build/'+options['name']+'.html', 'w')
+    filesafename = options['name'].replace(' ', '')
+    file = open('build/'+filesafename+'.html', 'w')
     file.write(render)
     file.close()
